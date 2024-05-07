@@ -1,0 +1,74 @@
+/* Estilo para el fotolibro de bebé */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-item {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cuatro columnas */
+    grid-gap: 20px; /* Espacio entre cuadrados */
+    margin: 20px auto;
+    width: 80%;
+
+}
+
+.grid-item {
+    border: 2px solid black;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #666; /* Color de texto más suave */
+    width: 200px;
+    height: 200px;
+}
+
+.grid-item:hover {
+    cursor: pointer;
+    background-color: #f0f0f0; /* Cambia el color de fondo al pasar el mouse */
+}
+
+
+#image-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#month-select {
+    margin-right: 10px;
+    padding: 5px;
+    border: 2px solid #333;
+}
+
+#upload-button {
+    padding: 8px 16px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#upload-button:hover {
+    background-color: #ff8c81;
+}
