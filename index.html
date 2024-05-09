@@ -7,28 +7,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Baby Photo Book</h1>
+    <div class="container">
+        <h1>Baby Photo Book</h1>
+    </div>
+    
     <div class="grid-container">
-        <div class="grid-item" data-month="1">Mi primera foto en el hospital</div>
-        <div class="grid-item" data-month="2">Mi primera foto con papá y mama</div>
-        <div class="grid-item" data-month="3">Mi primera ropita</div>
-        <div class="grid-item" data-month="4">Mi primera foto con mama</div>
-        <div class="grid-item" data-month="4">Mi primera foto con papa</div>
-        <div class="grid-item" data-month="5">Mi primera foto en los abuelos </div>
-        <div class="grid-item" data-month="6">Mi primera foto con el abuelo</div>
-        <div class="grid-item" data-month="7">Mi primera foto con la abuela</div>
-        <div class="grid-item" data-month="9">Otro texto descriptivo</div>
+        <div class="grid-item" data-month="0" id="0">Mi primera foto dentro de la panza</div>
+        <div class="grid-item" data-month="1" id="1">Mi primera foto en el hospital</div>
+        <div class="grid-item" data-month="2" id="2">Mi primera foto con papá y mama</div>
+        <div class="grid-item" data-month="3" id="3">Mi primera ropita</div>
+        <div class="grid-item" data-month="4" id="4">Mi primera foto con mama</div>
+        <div class="grid-item" data-month="5" id="5">Mi primera foto con papa</div>
+        <div class="grid-item" data-month="6" id="6">Mi primera foto en los abuelos </div>
+        <div class="grid-item" data-month="7" id="7">Mi primera foto con el abuelo</div>
+        <div class="grid-item" data-month="8" id="8">Mi primera foto con la abuela</div>
         <!-- Agrega más cuadros con texto descriptivo para cada mes -->
     </div>
     <form id="image-form" enctype="multipart/form-data">
-        <!-- <select id="month-select">
-            <option value="1">Month 1</option>
-            <option value="2">Month 2</option>
-            Agrega opciones para cada mes
-        </select> -->
         <input type="file" id="image-input" name="image" accept="image/*" multiple>
-        <button type="button" id="upload-button">Upload</button>
     </form>    
+    <button type="button" id="delete-button">Delete</button>
     <script src="script.js"></script>
 </body>
 </html>

@@ -4,6 +4,7 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    text-align: center; /* Centra todo el contenido */
 }
 
 .grid-item {
@@ -16,19 +17,36 @@ body {
     font-weight: bold;
 }
 
+.container {
+    text-align: center;
+    width: 100%;
+}
 
 h1 {
-    text-align: center;
-    color: #333;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #000000; /* Cambia el color del texto si lo deseas */
+    text-align: center; /* Centra el texto */
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Cuatro columnas */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el ancho mínimo y máximo de cada columna */
     grid-gap: 20px; /* Espacio entre cuadrados */
     margin: 20px auto;
-    width: 80%;
+    max-width: 1200px; /* Ancho máximo para evitar superposiciones */
+}
 
+/* Media query para ajustar el número de columnas en pantallas más grandes */
+@media screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta el ancho mínimo y máximo de cada columna */
+    }
+}
+
+/* Establece el ancho máximo para evitar que el contenedor se expanda demasiado */
+.grid-container {
+    max-width: 100%;
+    width: 80%;
 }
 
 .grid-item {
@@ -41,13 +59,13 @@ h1 {
     color: #666; /* Color de texto más suave */
     width: 200px;
     height: 200px;
+    background-size: cover;
 }
 
 .grid-item:hover {
     cursor: pointer;
     background-color: #f0f0f0; /* Cambia el color de fondo al pasar el mouse */
 }
-
 
 #image-form {
     text-align: center;
