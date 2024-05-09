@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         formData.append('image', imageFile, imageName); // Usar el nombre original del archivo
         formData.append('selectedMonth', selectedMonth); // También puedes enviar el mes seleccionado si lo necesitas
 
-        fetch('http://192.168.100.27:3000/upload', {
+        fetch('https://ff59-181-116-178-152.ngrok-free.app/upload', {
             method: 'POST',
             body: formData
         })
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para mostrar las imágenes al cargar la página
     function showImagesOnLoad() {
-        fetch('http://192.168.100.27:3000/getImages')
+        fetch('https://ff59-181-116-178-152.ngrok-free.app/getImages')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Error al obtener las imágenes.');
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para eliminar todas las imágenes del servidor
     function deleteAllImages() {
-        fetch('http://192.168.100.27:3000/delete', {
+        fetch('https://ff59-181-116-178-152.ngrok-free.app/delete', {
             method: 'DELETE'
         })
         .then(response => {
